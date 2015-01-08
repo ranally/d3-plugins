@@ -28,9 +28,8 @@
       nodes.forEach(function(n, i) {
         nodeIndexMap[n.index] = i; n.index = i;
         // while we're iterating, we can set the x, dx, and y values
-        n.x = curX;
-        n.dx = nxo(n);
-        curX += nw(n) + nxo(n) + sep(n);
+        n.x = curX + nxo(n);
+        curX += nw(n) + sep(n);
         n.y = 0;
       });
 
